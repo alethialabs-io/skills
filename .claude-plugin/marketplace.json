@@ -1,0 +1,11 @@
+{
+  "name": "alethia",
+  "owner": { "name": "Alethia Labs", "url": "https://github.com/alethialabs-io" },
+  "plugins": [
+    {
+      "name": "alethia",
+      "source": "./plugins/alethia",
+      "description": "Alethia's shared Claude Code skills: grill / research / handoff / deep-module design (vendored from mattpocock/skills, MIT), the Alethia security review, and the Alethia design system."
+    }
+  ]
+}
