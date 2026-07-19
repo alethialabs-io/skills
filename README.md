@@ -15,6 +15,7 @@ Under `plugins/alethia/skills/`:
 | `domain-modeling` · `codebase-design` | deep-module design vocabulary (rich behavior behind simple interfaces) | vendored, MIT |
 | `alethia-security-review` | review a change against Alethia's real threat surface (keyless / ReBAC / RLS / BYO sandbox / secrets / `ee/` boundary / runner) | Alethia original |
 | `alethia-design` | the Alethia Labs design system (tokens, components, UI kits, brand assets) | Alethia original |
+| `alethia-docs` | author/review the `apps/docs` docs to a consistent bar (Diátaxis structure + plain-language style + the Vale prose lint) | Alethia original |
 
 Vendored skills are from [mattpocock/skills](https://github.com/mattpocock/skills) (MIT) — see `NOTICE`.
 `wayfinder` is deliberately not here: Alethia's wayfinder is the coordination board (`.claude/COORDINATION.md`
