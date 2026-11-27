@@ -1,7 +1,8 @@
 {
   "name": "alethia",
-  "version": "0.2.0",
-  "description": "Alethia's shared Claude Code skills — grill, research, handoff, domain-modeling, codebase-design (vendored, MIT), alethia-security-review, alethia-design, and alethia-docs. The PR-reviewed source of truth; consumable as this plugin OR synced into a repo's .claude/skills/.",
-  "author": { "name": "Alethia Labs", "url": "https://github.com/alethialabs-io" },
-  "license": "MIT AND proprietary"
+  "description": "Alethia design system, docs authoring bar (Diátaxis + Vale) and threat-surface security review.",
+  "author": { "name": "Alethia Labs", "url": "https://alethialabs.io" },
+  "homepage": "https://github.com/alethialabs-io/skills",
+  "repository": "https://github.com/alethialabs-io/alethialabs",
+  "keywords": ["alethia", "kubernetes", "design-system", "docs", "security-review"]
 }

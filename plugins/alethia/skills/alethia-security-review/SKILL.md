@@ -49,15 +49,14 @@ customer var values; module path resolution is traversal- + symlink-guarded.
 
 ### 5. Secret handling
 Check: secrets flow through `integration_credentials` (or the runtime git/cloud-token handlers), **not**
-persisted plaintext. Known gap (W4): add-on config persists admin passwords/tokens as **plaintext JSONB**
-(`project_addons.values`/`values_yaml`) — any new secret-bearing config must use a typed secret path, not this
-JSONB. No secret in the config_snapshot (it's Postgres-persisted).
+persisted plaintext. Add-on knobs typed `secret` are stored as encrypted envelopes and reach the runner as a Secret
+ref, never in the snapshot or the Helm values (`apps/console/lib/addons/secrets.ts`). Free-form `values_yaml` is
+stored as written, so any new secret-bearing setting must be a typed `secret` field, never a key in free-form YAML. No secret in the config_snapshot (it's Postgres-persisted).
 
 ### 6. Open-core ee/ boundary
 Check: no file **outside** `ee/` imports from `ee/` (CI guards this — don't regress it). The license
-entitlement must be a real signed-JWT check, not the `ALETHIA_LICENSE_ACTIVE` env placeholder
-(`ee/src/index.ts` — this is a known open item; new ee-gated features must gate on the real entitlement, not
-the env flag).
+entitlement is a signed-JWT check (`ee/src/license.ts`); `ALETHIA_LICENSE_ACTIVE` is a development switch
+that release images ignore. New ee-gated features gate on the verified entitlement, never on the env flag.
 
 ### 7. Runner — mint-bind, scoping, signed evidence
 Check: minted tokens are bound to the job/cluster they were issued for (mint-bind), scoped least-privilege

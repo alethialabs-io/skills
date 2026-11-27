@@ -1,11 +1,15 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "alethia",
-  "owner": { "name": "Alethia Labs", "url": "https://github.com/alethialabs-io" },
+  "description": "Claude Code skills from Alethia Labs: the Alethia design system, docs bar and security review.",
+  "owner": { "name": "Alethia Labs", "url": "https://alethialabs.io" },
   "plugins": [
     {
       "name": "alethia",
+      "description": "Alethia design system, docs authoring bar (Diátaxis + Vale) and threat-surface security review.",
       "source": "./plugins/alethia",
-      "description": "Alethia's shared Claude Code skills: grill / research / handoff / deep-module design (vendored from mattpocock/skills, MIT), the Alethia security review, and the Alethia design system."
+      "category": "development",
+      "homepage": "https://github.com/alethialabs-io/skills"
     }
   ]
 }
