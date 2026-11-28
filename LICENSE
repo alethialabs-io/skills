@@ -6,8 +6,6 @@ Alethia Labs is open core. Portions of this software are licensed as follows:
   * All content that resides under the "ee/" directory of this repository, if
     that directory exists, is licensed under the license defined in
     "ee/LICENSE" (a commercial license; production use requires a subscription).
-  * All content under the "apps/legacy-cli/" directory is licensed under the GNU
-    General Public License v3.0 ("GPL-3.0-only"); see "apps/legacy-cli/LICENSE".
   * All third-party components incorporated into this software are licensed under
     the original license provided by the owner of the applicable component (for
     example, the vendored Terraform module under
